@@ -234,12 +234,11 @@ function rotate${id.count }(){
 					style="border-bottom-color: #CBCBCB; padding: 5px; border-bottom-style: dashed; border-bottom-width: 1px; margin: 10px 20px; color: #0F6548">
 					<font color="#CE6A1F" style="font-weight: bold; font-size: 14px;">${diaryList.username}</font>&nbsp;&nbsp;发表九宫格日记：<b>${diaryList.title}</b>
 				</div>
-				<div
-					style="margin: 10px 10px 0px 10px; background-color: #FFFFFF; border-bottom-color: #CBCBCB; border-bottom-style: dashed; border-bottom-width: 1px;">
+				<div style="margin: 10px 10px 0px 10px; background-color: #FFFFFF; border-bottom-color: #CBCBCB; border-bottom-style: dashed; border-bottom-width: 1px;">
 					<div id="diaryImg${id.count }"
 						style="border: 1px #DDDDDD solid; width: 60px; background-color: #EEEEEE;">
 
-						<div id="control${id.count }"
+						<div id="control${id.count }" style="weight:80px; height:90px; display:none"
 							style="display: none; padding: 10px;">
 							<%
 								String url = request.getRequestURL().toString();
@@ -247,12 +246,10 @@ function rotate${id.count }(){
 							%>
 							<a href="#"
 								onClick="zoom('${id.count }','${diaryList.address }')">收缩</a>
-							&nbsp;&nbsp; <a
-								href="<%=url %>/images/diary/${diaryList.address }.png"
-								target="_blank">查看原图</a> &nbsp;&nbsp;<a id="rotLeft${id.count }"
-								href="#">左转</a> &nbsp;&nbsp;<a id="rotRight${id.count }"
-								href="#">右转</a> <a id="reDefault${id.count }" href="#"
-								style="display: none">恢复默认</a>
+							&nbsp;&nbsp; <br><a	href="<%=url %>/images/diary/${diaryList.address }.png"
+								target="_blank">查看原图</a> &nbsp;&nbsp;<br><a id="rotLeft${id.count }"
+								href="#">左转</a> <br><a id="rotRight${id.count }"
+								href="#">右转</a> <br><a id="reDefault${id.count }" href="#">恢复默认</a><br>
 						</div>
 						<img id="diary${id.count }"
 							src="images/diary/${diaryList.address }scale.jpg"

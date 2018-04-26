@@ -34,7 +34,6 @@ public class DiaryServlet extends HttpServlet {
 	 */
 	public DiaryServlet() {
 		super();
-		// TODO Auto-generated constructor stub
 		dao = new DiaryDao();// 实例化日记相关的数据库操作类的对象
 	}
 
@@ -169,7 +168,7 @@ public class DiaryServlet extends HttpServlet {
 		session.setAttribute("weather", weather); // 保存天气
 		session.setAttribute("title", title); // 保存日记标题
 		session.setAttribute("diary", content); // 保存日记内容
-		request.getRequestDispatcher("preview.jsp").forward(request, response);// 重定向页面
+		request.getRequestDispatcher("preview.jsp").forward(request, response);
 	}
 
 	/**
